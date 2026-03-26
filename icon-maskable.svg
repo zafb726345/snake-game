@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0c1520" />
+      <stop offset="55%" stop-color="#153036" />
+      <stop offset="100%" stop-color="#0b1510" />
+    </linearGradient>
+    <linearGradient id="snake" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#dccd88" />
+      <stop offset="100%" stop-color="#6da44a" />
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" fill="url(#bg)" />
+  <path
+    d="M0 388c58-54 112-80 169-101 57-21 93-64 131-107 31-35 67-62 108-84v292H0z"
+    fill="#112219"
+    opacity="0.86"
+  />
+  <path
+    d="M80 360c52-16 92-38 126-70 36-34 63-78 96-109 28-26 63-47 110-63v74c-42 20-73 46-97 79-31 43-63 89-113 117-29 17-66 31-122 43z"
+    fill="#5a8aa1"
+    opacity="0.4"
+  />
+  <path
+    d="M152 165c23-28 62-46 108-46 74 0 134 42 134 94 0 31-21 58-55 75-14 7-29 13-47 17-10 2-15 15-7 23 16 19 27 39 27 62 0 54-52 97-117 97-51 0-95-27-112-68"
+    fill="none"
+    stroke="url(#snake)"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="42"
+  />
+  <circle cx="149" cy="164" r="29" fill="#dccd88" />
+  <circle cx="158" cy="158" r="6" fill="#0c1520" />
+</svg>

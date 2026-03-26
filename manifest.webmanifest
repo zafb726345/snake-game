@@ -1,0 +1,25 @@
+{
+  "name": "Snake: Wilderness Survival",
+  "short_name": "Snake Survival",
+  "description": "A cinematic wilderness-themed Snake game that can be installed like a lightweight web application.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0c1520",
+  "theme_color": "#0c1520",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

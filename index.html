@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake: Wilderness Survival</title>
+    <meta
+      name="description"
+      content="A cinematic wilderness-themed Snake game that can be installed like a lightweight web application."
+    />
+    <meta name="theme-color" content="#0c1520" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Snake Survival" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./snake-core.js" defer></script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <main class="app">
+      <section class="game-shell" aria-labelledby="snake-title">
+        <header class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">Wilderness Survival</p>
+            <h1 id="snake-title">Snake</h1>
+            <p class="subtitle">
+              Rain-heavy jungle canopy, cold mountain haze, and wet river terrain reimagined
+              as a cinematic survival run.
+            </p>
+          </div>
+
+          <div class="hero-badges" aria-label="Game details">
+            <span class="badge">Fog & Rain</span>
+            <span class="badge">River Valley</span>
+            <span class="badge">Cinematic Mood</span>
+          </div>
+        </header>
+
+        <section class="hud" aria-label="Game status">
+          <article class="hud-card score-card" aria-live="polite">
+            <span class="card-label">Score</span>
+            <strong id="score">0</strong>
+          </article>
+
+          <article class="hud-card status-card">
+            <span class="card-label">Field Status</span>
+            <p id="status" class="status status-pill" aria-live="polite">
+              Press Start, Arrow keys, or WASD to begin.
+            </p>
+          </article>
+        </section>
+
+        <section class="play-layout">
+          <div class="screen-frame">
+            <div class="screen-top">
+              <div class="screen-lights" aria-hidden="true">
+                <span class="light light-red"></span>
+                <span class="light light-yellow"></span>
+                <span class="light light-green"></span>
+              </div>
+              <p class="screen-label">Terrain Monitor</p>
+            </div>
+
+            <div class="board-wrap">
+              <div
+                id="board"
+                class="board"
+                role="grid"
+                aria-label="Snake game board"
+              ></div>
+            </div>
+          </div>
+
+          <aside class="control-panel">
+            <div class="actions">
+              <button id="start-button" class="button button-primary" type="button">
+                Start Game
+              </button>
+              <button id="pause-button" class="button button-secondary" type="button">
+                Pause
+              </button>
+              <button id="install-button" class="button button-tertiary" type="button" hidden>
+                Install App
+              </button>
+            </div>
+
+            <section class="controls-card" aria-label="On-screen controls">
+              <p class="panel-title">Navigation</p>
+              <div class="controls-panel">
+                <button class="control control-up" type="button" data-direction="up" aria-label="Move up">
+                  ↑
+                </button>
+                <button class="control control-left" type="button" data-direction="left" aria-label="Move left">
+                  ←
+                </button>
+                <button class="control control-down" type="button" data-direction="down" aria-label="Move down">
+                  ↓
+                </button>
+                <button class="control control-right" type="button" data-direction="right" aria-label="Move right">
+                  →
+                </button>
+              </div>
+            </section>
+
+            <section class="help-card">
+              <p class="panel-title">Field Notes</p>
+              <p class="help">
+                Arrow keys or <kbd>WASD</kbd> move the snake. Press <kbd>Space</kbd> or
+                <kbd>P</kbd> to pause, and <kbd>R</kbd> or <kbd>Enter</kbd> to restart.
+              </p>
+              <p class="help">
+                Serve this folder over local HTTP to enable install and offline app support.
+              </p>
+            </section>
+          </aside>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
